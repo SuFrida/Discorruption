@@ -45,8 +45,8 @@ function drawRegionsMap() {
         region: 'MX', // Mexico
         resolution: 'provinces',
         colorAxis: {
-            //     	minValue=100,
-            //     maxValue=400,
+            //     	minValue=1,
+            //     maxValue=5,
             values: [1, 2, 3, 4, 5],
             colors: ['black', '#e15554', '#028090', '#8acdd0', '#f8f8f8'],
         },
