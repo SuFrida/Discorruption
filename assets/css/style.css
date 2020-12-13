@@ -367,7 +367,7 @@ h6 {
 
 #main p {
   color: var(--black);
-  margin: 15px 0 0 0;
+  /* margin: 15px 0 0 0; */
   font-size: 22px;
 }
 
@@ -404,7 +404,7 @@ h6 {
 
 #titulos p {
   color: #45505b;
-  margin: 15px 0 0 0;
+  margin: 15px 0 0 4%;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
@@ -1047,7 +1047,6 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  background: var(--white);
 }
 
 .contact .php-email-form .form-group {
