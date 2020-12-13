@@ -4,8 +4,11 @@ google.charts.load('upcoming', {
 google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
-    var data = google.visualization.arrayToDataTable([
-        ['Estado', 'Calificación', 'Puntaje'],
+    var data3 = new google.visualization.DataTable();
+    data3.addColumn('string', 'Estado');
+    data3.addColumn('number', 'Calificación');
+    data3.addColumn('string', 'Puntaje');
+    data3.addRows([
         ['Baja California', '4', '★★★★☆'],
         ['Sonora', '5', '★★★★★'],
         ['Chihuahua', '5', '★★★★★'],
@@ -52,7 +55,7 @@ function drawRegionsMap() {
         },
         backgroundColor: '#81d4fa',
         datalessRegionColor: '#eeeeee',
-        defaultColor: '#f5f5f5',
+        defaultColor: '#f5f5f5'
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('geochart-colors'));

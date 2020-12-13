@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
 
   <!-- =======================================================
   * Template Name: MyResume - v2.2.0
@@ -74,7 +75,7 @@
 
   <main id="main">
 
-    <div class="p-5">
+    <div class="p-5 container">
 
       <p>
         En nuestro país las necesidades que pueden llegar a existir dentro 
@@ -87,8 +88,10 @@
     </div>
 
     <!-- ==== Mapa ==== -->
-    <div id="geochart-colors" style="width: 70%; height: 70%;" class="p-5"></div>
+    <div id="licitar" style="width: 70%; height: 70%;" class="p-5"></div>
     <!-- === Mapa === -->
+
+    
 
 
     <!-- ======= Forms Section ======= -->
@@ -96,7 +99,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Título</h2>
+          <h2>Inicia tu proceso de licitación</h2>
         </div>
 
         <div class="row mt-1">
@@ -104,31 +107,90 @@
           <div class="col-lg-12 mt-5 mt-lg-0">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+             
+              <div class="row form-group">
+                <div class="col-md-4 col-12">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+                </div>
+                <div class="col-md-4 col-12">
+                  <input type="text" name="middleName" class="form-control" id="middleName" placeholder="Apellido Paterno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+                </div>
+                <div class="col-md-4 col-12">
+                  <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Apellido Materno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-12">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
+               
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <label for="exampleFormControlSelect1">Categoría</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
                 <div class="validate"></div>
               </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Example file input</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <div class="validate"></div>
+            </div>
+            
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+                <div class="validate"></div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Default checkbox
+                </label>
+                <div class="validate"></div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                  Disabled checkbox
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#staticBackdrop">Large button</button>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Enviar solicitud</button></div>
+          </form>
 
           </div>
 
@@ -137,6 +199,8 @@
       </div>
     </section><!-- End Forms Section -->
 
+    <button id="button" class="btn btn-danger">Click Me</button>
+    <div id="mensaje"></div>
 
   </main><!-- End #main -->
 
@@ -184,8 +248,75 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script src="assets/js/map.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.charts.load('upcoming', {
+        'packages': ['geochart']
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'Accent'],
+          ['Baja California', 100],
+          ['Sonora', '100'],
+          ['Chihuahua', '100'],
+          ['Coahuila', '100'],
+          ['Nuevo León', '100'],
+          ['Tamaulipas', '100'],
+          ['Sinaloa', '100'],
+          ['Nayarit', '100'],
+          ['Durango', '100'],
+          ['Zacatecas', '400'],
+          ['Jalisco', '400'],
+          ['Colima', '400'],
+          ['Tlaxcala', '400'],
+          ['Aguascalientes', '400'],
+          ['Zacatecas', '400'],
+          ['San Luis Potosí', '400'],
+          ['Puebla', '400'],
+          ['Guanajuato', '400'],
+          ['Querétaro', '400'],
+          ['Hidalgo', '400'],
+          ['Morelos', '400'],
+          ['Estado de México', 400],
+          ['Distrito Federal', 400],
+          ['Baja California Sur', '200'],
+          ['Michoacán', '200'],
+          ['Guerrero', '200'],
+          ['Oaxaca', '200'],
+          ['Veracruz', '200'],
+          ['Tabasco', '200'],
+          ['Campeche', '300'],
+          ['Chiapas', '200'],
+          ['Quintana Roo', '300'],
+          ['Yucatán', '300']
+        ]);
+
+        var options = {
+          region: 'MX', // Mexico
+          resolution: 'provinces',
+          colorAxis: {
+            //     	minValue=100,
+            //     maxValue=400,
+            values: [100, 200, 300, 400],
+            colors: ['green', 'yellow', 'violet', 'orange']
+          },
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: '#eeeeee',
+          defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('licitar'));
+        chart.draw(data, options);
+      };
+
+
+  </script>
+  
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="assets/js/dataApi.js"></script> -->
+  
 
 </body>
 
