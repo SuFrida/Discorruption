@@ -36,6 +36,84 @@
 </head>
 
 <body>
+  <!-- Modal Quiz -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <div class="row">
+            <h2 class="modal-title col-12" id="staticBackdropLabel">¿Estas listo para participar en un proceso de licitación?</h2>
+          <p class="lead col-12 pl-3" style="font-size: small; letter-spacing: 2px; font-weight: 300;">Es importante previamente conocer  la convocatoria a la licitación pública que se desea participar, ya que esta establecerá las bases en que se desarrollará el procedimiento y en las cuales se describirán los requisitos de participación. Esta se puede obtener de manera gratuita en todos los casos. 
+            <br>
+            Es necesario que tú como PyMe cuentes de manera indispensable con todos o la mayoría de los siguientes requisitos para participar dentro del proceso de licitación.
+            </p>
+          </div>
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-5">
+          <form action="">
+            <h2 style="font-weight: 300;" class="mb-4">Requisitos del punto 5 de la convocatoria relativos a la materia y giro de la licitación en particular.</h2>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Escrito en el cual el firmante manifieste que tiene las facultades para comprometerse por sí o por su representado.
+                </label>
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Documento que acredite la  existencia legal y personalidad jurídica de su empresa 
+                </label>
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Una dirección de correo electrónico.
+                </label>
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Una declaración escrita, bajo protesta de decir verdad. 
+                </label>
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Una declaración de integridad, bajo protesta de decir verdad, que por sí mismos o a través de interpósita persona, se abstendrán de adoptar conductas que induzcan o alteren las evaluaciones de las proposiciones y el resultado del procedimiento. 
+                </label>
+                <div class="validate"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary mt-4" type="button">Calcular</button>
+            
+          </form>
+          
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -58,12 +136,22 @@
 
 
   <main id="main">
-
+    <a href="contacto.html">
+      <video width="650px" autoplay style="position: absolute; top: 0%; left: 50%; z-index: 3;">
+        <source src="assets/img/video/pyme.mp4" type="video/mp4"> 
+        <!--<source src="video1.ogg" type="video/ogg">-->
+        </video>
+    </a>
+    
     <!-- ======= Titulos Section ======= -->
-    <section id="titulos" class="d-flex flex-column justify-content-center">
+    <section id="titulos" class="">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>¿Eres PyME?</h1>
-        <p>Aquí te podemos ayudar a <span class="typed" data-typed-items="crecer tus ventas, guiarte en participar en una licitación, vender tus productos al sector público"></span></p>
+        <div class="row d-block">
+          <div class="col-6">
+            <h1>¿Eres PyME?</h1>
+          <p>Aquí te podemos ayudar a <span class="typed" data-typed-items="crecer tus ventas, guiarte en participar en una licitación, vender tus productos al sector público"></span></p>
+          </div>
+        </div>
       </div>
     </section><!-- End titulos -->
 
@@ -75,11 +163,17 @@
     <!-- ======= Características de pyme Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>¿Eres una PyME?</h2>
-          <p>Si cumples con los siguientes puntos, lo más probable es que seas una PyME:</p>
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>¿Eres una PyME?</h2>
+              <p>Si cumples con los siguientes puntos, lo más probable es que seas una PyME:</p>
+            </div>
+          </div>
+          
         </div>
+
+        
 
         <div class="row">
 
@@ -239,77 +333,109 @@
     <section id="head">
       <img src="assets/img/pics/proceso2100.jpg" class="img-fluid" alt="proceso de licitación">
     </section><!-- End Infografía licitación -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
+    <div class="container text-center">
+      <button type="button" class="btn btn-primary btn-lg col-6" data-toggle="modal" data-target="#staticBackdrop">
+        ¿Estas listo para participar en un proceso de licitación?
+      </button>
+    </div>
+    
+    
+    <!-- ======= Forms Section ======= -->
+    
+    <section id="contact" class="contact" style="margin-bottom: 20vh; margin-top: 10vh" >
+      <div class="modal fade" data-aos="fade-up" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
+          <h2></h2>
+          <h4>Procedimiento para ser testigo social.</h4>
         </div>
 
-        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row rounded p-5" style="background-color: var(--white);">
+          <h3>Requisitos: </h3>
+          <div class="col-lg-12">
 
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Ser ciudadano mexicano en ejercicio de sus derechos o extranjero cuya condición migratoria permita la función a desarrollar;</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">
+                  Cuando se trate de una organización no gubernamental, acreditar que se encuentra constituida conforme a las disposiciones legales aplicables y que no persigue fines de lucro;
+                </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">
+                  No haber sido sentenciado con pena privativa de libertad;
+                </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Sí</label>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">No</label>
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inlineRadioButtons">Preguntar si ha sido sancionado como servidor publico si/no 
+                </label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Sí</label>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">No</label>
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">
+                  Presentar currículo en el que se acrediten los grados académicos, la especialidad correspondiente, la experiencia laboral y, en su caso, docente, así como los reconocimientos que haya recibido a nivel académico y profesional;
+                </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">
+                  Cuando se trate de una organización no gubernamental, acreditar que se encuentra constituida conforme a las disposiciones legales aplicables y que no persigue fines de lucro;
+                </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">
+                  Asistir a los cursos de capacitación que imparte la Secretaría de la Función Pública sobre esta Ley y Tratados, y
+h)  Presentar manifestación escrita bajo protesta de decir verdad que se abstendrá de participar en contrataciones en las que pudiese existir conflicto de intereses, ya sea porque los licitantes o los servidores públicos que intervienen en las mismas tienen vinculación académica, de negocios o familiar.
+                </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar solicitud</button></div>
+            </form>
 
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
-
+    </section><!-- End Forms Section -->
 
   </main><!-- End #main -->
 
