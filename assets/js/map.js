@@ -48,7 +48,7 @@ function drawRegionsMap() {
             //     	minValue=100,
             //     maxValue=400,
             values: [1, 2, 3, 4, 5],
-            colors: ['green', 'yellow', 'violet', 'orange']
+            colors: ['green', 'yellow', 'violet', 'orange'],
         },
         backgroundColor: '#81d4fa',
         datalessRegionColor: '#eeeeee',
