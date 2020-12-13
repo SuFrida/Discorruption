@@ -52,7 +52,7 @@ function drawRegionsMap() {
         },
         backgroundColor: '#81d4fa',
         datalessRegionColor: '#eeeeee',
-        defaultColor: '#f5f5f5',
+        defaultColor: '#f5f5f5'
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('geochart-colors'));

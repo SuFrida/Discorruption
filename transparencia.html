@@ -127,8 +127,8 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">¿Qué es una compra pública?</a></h4>
-              <p>Es la acción que realizan las instituciones de gobierno para adquirir aquello que necesitan para funcionar correctamente. Por ejemplo, si las oficinas de la Secretaría del Trabajo necesitan lapiceros deben realizar una compra pública para poder surtirse. Las compras públicas se pueden hacer de diferentes formas: Licitación, adjudicación directa e invitación a tres personas.</p>
+              <h4 class="text-left"><a href="">¿Qué es una compra pública?</a></h4>
+              <p class="text-left">Es la acción que realizan las instituciones de gobierno para adquirir aquello que necesitan para funcionar correctamente. Por ejemplo, si las oficinas de la Secretaría del Trabajo necesitan lapiceros deben realizar una compra pública para poder surtirse. Las compras públicas se pueden hacer de diferentes formas: Licitación, adjudicación directa e invitación a tres personas.</p>
             </div>
           </div>
 
@@ -322,38 +322,95 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Título</h2>
+          <h2>¿Has presenciado actos de corrupción por parte de licitantes?</h2>
+          <h4>Realiza una queja ciudadana...</h4>
         </div>
 
-        <div class="row mt-1">
+        <div class="row rounded p-5" style="background-color: var(--white);">
 
-          <div class="col-lg-12 mt-5 mt-lg-0">
+          <div class="col-lg-12">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+             
+                <div class="row form-group">
+                  <div class="col-md-4 col-12">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                    <input type="text" name="middleName" class="form-control" id="middleName" placeholder="Apellido Paterno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Apellido Materno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-12">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validate"></div>
+                  </div>
+                 
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Categoría</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
                   <div class="validate"></div>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Example file input</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="validate"></div>
+              </div>
+              
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">1</label>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">2</label>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Default checkbox
+                  </label>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                  <label class="form-check-label" for="defaultCheck2">
+                    Disabled checkbox
+                  </label>
+                </div>
               </div>
               <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar solicitud</button></div>
             </form>
 
           </div>
