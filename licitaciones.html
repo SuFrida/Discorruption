@@ -87,11 +87,28 @@
 
     </div>
 
-    <!-- ==== Mapa ==== -->
-    <div id="licitar" style="width: 70%; height: 70%;" class="p-5"></div>
-    <!-- === Mapa === -->
 
-    
+    <!-- ==== Mapa ==== -->
+    <div class="container-fluid d-flex justify-content-center" a=>
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="section-title">
+            <h2>Clasificación de adquisiciones públicas</h2>
+            <p>Distibución de las compras públicas federales del 2019 por tipo de acuerdo con información de CompraNet y de Mexicanos Contra la Corrupción y la Impunidad</p>
+          </div>
+        </div>
+
+        <div class="col-12 justify-content-center d-flex">
+          <canvas id="oilChart" width="800" height="450"></canvas>
+        </div> 
+
+        <!--<div class="col-12 justify-content-center d-flex">
+          <div id="geochart-colors" class="d-flex" style="width: 70%; height: 70%;"></div>
+        </div> -->
+
+      </div>
+      
+    </div>
 
 
     <!-- ======= Forms Section ======= -->
@@ -247,75 +264,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script>
-    google.charts.load('upcoming', {
-        'packages': ['geochart']
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable([
-          ['State', 'Accent'],
-          ['Baja California', 100],
-          ['Sonora', '100'],
-          ['Chihuahua', '100'],
-          ['Coahuila', '100'],
-          ['Nuevo León', '100'],
-          ['Tamaulipas', '100'],
-          ['Sinaloa', '100'],
-          ['Nayarit', '100'],
-          ['Durango', '100'],
-          ['Zacatecas', '400'],
-          ['Jalisco', '400'],
-          ['Colima', '400'],
-          ['Tlaxcala', '400'],
-          ['Aguascalientes', '400'],
-          ['Zacatecas', '400'],
-          ['San Luis Potosí', '400'],
-          ['Puebla', '400'],
-          ['Guanajuato', '400'],
-          ['Querétaro', '400'],
-          ['Hidalgo', '400'],
-          ['Morelos', '400'],
-          ['Estado de México', 400],
-          ['Distrito Federal', 400],
-          ['Baja California Sur', '200'],
-          ['Michoacán', '200'],
-          ['Guerrero', '200'],
-          ['Oaxaca', '200'],
-          ['Veracruz', '200'],
-          ['Tabasco', '200'],
-          ['Campeche', '300'],
-          ['Chiapas', '200'],
-          ['Quintana Roo', '300'],
-          ['Yucatán', '300']
-        ]);
-
-        var options = {
-          region: 'MX', // Mexico
-          resolution: 'provinces',
-          colorAxis: {
-            //     	minValue=100,
-            //     maxValue=400,
-            values: [100, 200, 300, 400],
-            colors: ['green', 'yellow', 'violet', 'orange']
-          },
-          backgroundColor: '#81d4fa',
-          datalessRegionColor: '#eeeeee',
-          defaultColor: '#f5f5f5',
-        };
-
-        var chart = new google.visualization.GeoChart(document.getElementById('licitar'));
-        chart.draw(data, options);
-      };
-
-
-  </script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="assets/js/mapLicitar.js"></script>
   
   <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="assets/js/dataApi.js"></script> -->
+
+  <script src="assets/vendor/charts/Chart.min.js"></script>
+  <script src="assets/js/myChart1.js"></script>
+  
   
 
 </body>
