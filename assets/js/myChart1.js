@@ -5,19 +5,17 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var oilData = {
     labels: [
-        "Saudi Arabia",
-        "Russia",
-        "Iraq",
-        "United Arab Emirates",
-        "Canada"
+        "Adjudicaciones Directas",
+        "Invitación Restringida",
+        "Licitación Pública",
+        "Otros"
     ],
     datasets: [{
-        data: [133.3, 86.2, 52.2, 51.2, 50.2],
+        data: [78.16, 8.18, 13.21, 0.45],
         backgroundColor: [
             "#FF6384",
             "#63FF84",
             "#84FF63",
-            "#8463FF",
             "#6384FF"
         ]
     }]
