@@ -27,6 +27,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- API REST Axios -->
+  <script src="node_modules/axios/dist/axios.min.js"></script>
+
   <!-- =======================================================
   * Template Name: MyResume - v2.2.0
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -37,6 +40,21 @@
 
 <body>
 
+  <!-- Axios Buttons -->
+  
+  <button id="json_get">Request JSON GET</button> 
+  
+  <div><a href="test.html">Hola</a></div>
+  <div id="loading">cargando...</div>
+
+  <!-- <script>
+    const apiDatosGobMx = require('api-datos-gob-mx')
+
+(async()=>{
+   const results = await apiDatosGobMx.calidadAgua()
+})()
+      </script> -->
+
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
@@ -45,7 +63,7 @@
 
     <nav class="nav-menu">
       <ul>
-        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="testigos.html"><i class="bx bx-user"></i> <span>Testigos</span></a></li>
         <li><a href="transparencia.html"><i class="bx bx-file-blank"></i> <span>Transparencia</span></a></li>
         <li><a href="licitaciones.html"><i class="bx bx-book-content"></i> <span>Licitaciones</span></a></li>
@@ -74,7 +92,7 @@
   <main id="main">
 
     <!-- ==== Mapa ==== -->
-  
+    <div id="geochart-colors" style="width: 480px; height: 296px;"></div>
     <!-- // Mapa -->
 
   </main><!-- End #main -->
@@ -124,7 +142,8 @@
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <div id="geochart-colors" style="width: 480px; height: 296px;"></div>
+  <script src="assets/js/map.js"></script>
+  
 
 </body>
 
