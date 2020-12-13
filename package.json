@@ -1,0 +1,25 @@
+{
+  "name": "discorruption",
+  "version": "1.0.0",
+  "description": "Licitemus Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuFrida/Discorruption.git"
+  },
+  "author": "Frida SuFrida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuFrida/Discorruption/issues"
+  },
+  "homepage": "https://github.com/SuFrida/Discorruption#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "api-datos-gob-mx": "^1.0.2",
+    "axios": "^0.21.0",
+    "chart.js": "^2.9.4"
+  }
+}
