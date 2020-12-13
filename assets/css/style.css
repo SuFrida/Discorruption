@@ -39,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+  color: var(--black);
 }
 
 /*--------------------------------------------------------------
@@ -346,6 +347,68 @@ h6 {
     line-height: 24px;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Main Section
+--------------------------------------------------------------*/
+
+#main h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--black);
+}
+
+#main p {
+  color: var(--black);
+  margin: 15px 0 0 0;
+  font-size: 22px;
+}
+
+#main p span {
+  color: var(--aqua);
+  letter-spacing: 1px;
+}
+
+/*--------------------------------------------------------------
+# Titulos Section
+--------------------------------------------------------------*/
+
+
+#titulos:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#titulos h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #45505b;
+  text-overflow: ellipsis;
+  overflow: hidden;  
+}
+
+#titulos p {
+  color: #45505b;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#titulos p span {
+  color: var(--aqua);
+  letter-spacing: 1px;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
