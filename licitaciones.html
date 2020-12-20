@@ -37,15 +37,172 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<style>
+    * {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
 		.animh1 {	
 			animation: fadeInLeft;
 			animation-duration: 3s;
-		}
+    }
+    
 	</style>
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agenda tu asesoría</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1>Diciembre 2020</h1>
 
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August<br>
+      <span style="font-size:18px">2017</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
@@ -75,9 +232,9 @@
 
   <main id="main">
 
-    <div class="p-5 container">
-      <img src="assets/img/pics/Asset 9.jpg" class="img-fluid" style="height: 25em;" alt="hombre sosteniendo tablet mirando gáfricas">
-      <p>
+    <div class="p-5 mt-3 mb-5 container-fluid rounded jumbotron rounded" style="background-color: #f0f0f0">
+      
+      <p class="lead">
         En nuestro país las necesidades que pueden llegar a existir dentro 
         de las instituciones y dependencias públicas son innumerables, razón por 
         la cual existe un  área de compras públicas que se realizan mediante licitaciones 
@@ -86,7 +243,6 @@
       </p>
 
     </div>
-
 
     <!-- ==== Mapa ==== -->
     <div class="container-fluid d-flex justify-content-center" a=>
@@ -112,111 +268,25 @@
 
 
     <!-- ======= Forms Section ======= -->
-    <section id="contact" class="contact" style="margin-bottom: 20vh; margin-top: 10vh" >
+    <section id="contact" class="contact text-center p-3" style="margin-bottom: 20vh; margin-top: 10vh; background-color: var(--white);" >
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Inicia tu proceso de licitación</h2>
+          <h2>¿Quieres comenzar tu proceso de licitación?</h2>
+          <h5>¡No dudes en agendar tu cita con nosotros!</h5>
         </div>
 
-        <div class="row mt-1">
+        <button type="button" class="btn btn-lg p-4 text-white" style="background-color: var(--aqua2);" data-toggle="modal" data-target="#exampleModal">
+          AGENDA TU ASESORÍA
+        </button>
 
-          <div class="col-lg-12 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-             
-              <div class="row form-group">
-                <div class="col-md-4 col-12">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-                </div>
-                <div class="col-md-4 col-12">
-                  <input type="text" name="middleName" class="form-control" id="middleName" placeholder="Apellido Paterno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-                </div>
-                <div class="col-md-4 col-12">
-                  <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Apellido Materno" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-12">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-               
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Categoría de tu empresa</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Persona física</option>
-                  <option>Empresa tipo A</option>
-                  <option>Empresa tipo B</option>
-                  <option>Empresa tipo C</option>
-                </select>
-                <div class="validate"></div>
-              </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlFile1">Example file input</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              <div class="validate"></div>
-            </div>
-            
-            <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-                <div class="validate"></div>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-                <div class="validate"></div>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Default checkbox
-                </label>
-                <div class="validate"></div>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                <label class="form-check-label" for="defaultCheck2">
-                  Disabled checkbox
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#staticBackdrop">Large button</button>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Enviar solicitud</button></div>
-          </form>
-
-          </div>
-
-        </div>
+        
 
       </div>
     </section><!-- End Forms Section -->
 
-    <button id="button" class="btn btn-danger">Click Me</button>
-    <div id="mensaje"></div>
+    <!-- <button id="button" class="btn btn-danger">Click Me</button>
+    <div id="mensaje"></div> -->
 
   </main><!-- End #main -->
 
